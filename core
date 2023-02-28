@@ -55,7 +55,7 @@ install() {
     #   https://github.com/electerm/electerm/releases/download/v1.25.16/electerm-1.25.16-mac-arm64.dmg
     #   https://github.com/electerm/electerm/releases/download/v1.25.16/electerm-1.25.16-mac-x64.dmg
     # generate url
-    local url="${DESKTOP_CORE_RELEASE_DOWNLOAD}/${DESKTOP_CORE_VERSION}/electron-${DESKTOP_CORE_VERSION#v}-${platform}-${arch}.dmg"
+    local url="${DESKTOP_CORE_RELEASE_DOWNLOAD}/${DESKTOP_CORE_VERSION}/electerm-${DESKTOP_CORE_VERSION#v}-${platform}-${arch}.dmg"
     log::debug "[$(timestamp)][desktop][$name][$kernel][$arch] url: $url, file: ${cache_file}, tmp_dir: $tmp_dir"
 
     # download
@@ -66,7 +66,7 @@ install() {
   # install
   log::info "[$(timestamp)][desktop][$name] installing $cache_file ..."
   # os::install $source_bin_file $usr_bin_dir $name
-  install::dmg $cache_file electerm electerm.app "/Volumes/electerm\ 1.25.16-arm64"
+  install::dmg $cache_file electerm electerm.app "/Volumes/electerm 1.25.16-arm64"
 
   # clean
   log::info "[$(timestamp)][desktop][$name] cleaning ..."
